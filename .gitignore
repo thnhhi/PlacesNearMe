@@ -1,11 +1,34 @@
+# macOS
+.DS_Store
+
 # Xcode
-DerivedData/
-*.xcworkspace/xcuserdata/
+*.xcuserstate
+*.xcworkspace
+*.xccheckout
+*.xcodeproj/project.xcworkspace/
 *.xcodeproj/xcuserdata/
+xcuserdata/
+DerivedData/
 build/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
 
 # CocoaPods
 Pods/
+Podfile.lock
 
-# macOS
-.DS_Store
+# Carthage (nếu có)
+Carthage/
+
+# Fastlane (nếu dùng)
+fastlane/report.xml
+fastlane/screenshots/
+fastlane/test_output/
+
+# Temporary files
+*.tmp
+*.swp
+*~
