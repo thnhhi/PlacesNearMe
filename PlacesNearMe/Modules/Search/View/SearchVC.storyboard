@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="Y6W-OH-hqX" customClass="SearchVC" customModule="PlacesNearMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEK-sH-oWJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRd-fN-sOE">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tìm kiếm gần đây" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B5-iZ-OZ5">
+                                                <rect key="frame" x="140.66666666666666" y="63.666666666666664" width="111.66666666666666" height="16.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="q4I-NM-lAR">
+                                                <rect key="frame" x="0.0" y="90" width="393" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="v5q-rK-Bpl"/>
+                                                </constraints>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </searchBar>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="CQp-8T-m10"/>
+                                            <constraint firstItem="q4I-NM-lAR" firstAttribute="top" secondItem="9B5-iZ-OZ5" secondAttribute="bottom" constant="10" id="D2W-VT-Jwy"/>
+                                            <constraint firstItem="q4I-NM-lAR" firstAttribute="leading" secondItem="nRd-fN-sOE" secondAttribute="leading" id="IFS-up-7nr"/>
+                                            <constraint firstItem="9B5-iZ-OZ5" firstAttribute="centerX" secondItem="nRd-fN-sOE" secondAttribute="centerX" id="drk-Rd-e5w"/>
+                                            <constraint firstAttribute="trailing" secondItem="q4I-NM-lAR" secondAttribute="trailing" id="jOU-oW-woX"/>
+                                            <constraint firstAttribute="bottom" secondItem="q4I-NM-lAR" secondAttribute="bottom" id="rel-z5-Drg"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Dz-5t-7Gv">
+                                        <rect key="frame" x="0.0" y="140" width="393" height="712"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có kết quả tìm kiếm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNE-Dx-g8z">
+                                        <rect key="frame" x="112" y="418" width="169" height="16.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4Dz-5t-7Gv" firstAttribute="top" secondItem="nRd-fN-sOE" secondAttribute="bottom" id="1r9-tP-fRd"/>
+                                    <constraint firstItem="YNE-Dx-g8z" firstAttribute="centerY" secondItem="BEK-sH-oWJ" secondAttribute="centerY" id="EWA-KJ-D3Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Dz-5t-7Gv" secondAttribute="bottom" id="PUm-bF-Xv2"/>
+                                    <constraint firstItem="YNE-Dx-g8z" firstAttribute="centerX" secondItem="BEK-sH-oWJ" secondAttribute="centerX" id="abz-KO-YWI"/>
+                                    <constraint firstItem="nRd-fN-sOE" firstAttribute="leading" secondItem="BEK-sH-oWJ" secondAttribute="leading" id="ebY-eh-MyL"/>
+                                    <constraint firstAttribute="trailing" secondItem="nRd-fN-sOE" secondAttribute="trailing" id="evw-wX-qkS"/>
+                                    <constraint firstItem="nRd-fN-sOE" firstAttribute="top" secondItem="BEK-sH-oWJ" secondAttribute="top" id="hhg-EY-XNB"/>
+                                    <constraint firstItem="4Dz-5t-7Gv" firstAttribute="leading" secondItem="BEK-sH-oWJ" secondAttribute="leading" id="iG7-kG-TBb"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Dz-5t-7Gv" secondAttribute="trailing" id="sjM-Ld-F90"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BEK-sH-oWJ" secondAttribute="trailing" id="15f-14-ajI"/>
+                            <constraint firstItem="BEK-sH-oWJ" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="9fZ-eZ-VHM"/>
+                            <constraint firstAttribute="bottom" secondItem="BEK-sH-oWJ" secondAttribute="bottom" id="bNU-AF-uHx"/>
+                            <constraint firstItem="BEK-sH-oWJ" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="l2i-7Z-oRm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblEmptyMessage" destination="YNE-Dx-g8z" id="Kmr-BI-OsV"/>
+                        <outlet property="searchBar" destination="q4I-NM-lAR" id="vaI-TD-DBq"/>
+                        <outlet property="tbvSearch" destination="4Dz-5t-7Gv" id="QhW-B4-HHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
