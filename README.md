@@ -32,5 +32,5 @@ An iOS application that shows nearby places based on your current location. Buil
 3. **Open project**:
     open PlacesNearMe.xcworkspace
 3. **Add your Google API Key**:
-    Go to AppDelegate.swift or your network config file
-    Replace "YOUR_GOOGLE_API_KEY" with your actual key
+    Go to Config/Enviroment.swift
+    Replace "apiKey" with your actual key
