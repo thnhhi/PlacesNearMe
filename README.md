@@ -25,7 +25,7 @@ An iOS application that shows nearby places based on your current location. Buil
 ## 🔧 Setup Instructions
 
 1. **Clone the repository**:
-    git clone https://github.com/your-username/PlacesNearMe.git
+    git clone https://github.com/thnhhi/PlacesNearMe.git
     cd PlacesNearMe
 2. **Install dependencies**:
     pod install
